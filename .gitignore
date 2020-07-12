@@ -1,7 +1,9 @@
 .DS_Store
 /composer.lock
 /phpcs.xml
-node_modules/
+node_modules
+package
+public
 
 # Artifacts
 process.yml
