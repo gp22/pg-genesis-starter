@@ -1,13 +1,13 @@
 <?php
 /**
- * Genesis Sample child theme.
+ * PG Genesis Starter.
  *
  * Post type supports.
  *
- * @package Genesis Sample
- * @author  StudioPress
+ * @package PG Genesis Starter
+ * @author  Paul Garcia
  * @license GPL-2.0-or-later
- * @link    https://my.studiopress.com/themes/genesis-sample/
+ * @link    https://github.com/gp22/pg-genesis-starter/
  */
 
 return [

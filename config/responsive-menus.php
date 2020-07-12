@@ -1,18 +1,21 @@
 <?php
 /**
- * Genesis Sample child theme.
+ * PG Genesis Starter.
  *
- * @package Genesis Sample
- * @author  StudioPress
+ * @package PG Genesis Starter
+ * @author  Paul Garcia
  * @license GPL-2.0-or-later
- * @link    https://my.studiopress.com/themes/genesis-sample/
+ * @link    https://github.com/gp22/pg-genesis-starter/
  */
 
 /**
  * Genesis responsive menus settings. (Requires Genesis 3.0+.)
+ * Removed 'Menu' text from nav according to this article:
+ * https://designody.com/remove-menu-text-from-genesis-sample/
  */
 return [
 	'script' => [
+		'mainMenu' => __( '', 'pg-genesis-starter' ),
 		'menuClasses' => [
 			'others' => [ '.nav-primary' ],
 		],

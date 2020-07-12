@@ -1,13 +1,13 @@
 <?php
 /**
- * Genesis Sample theme settings.
+ * PG Genesis Starter theme settings.
  *
  * Genesis 2.9+ updates these settings when themes are activated.
  *
- * @package Genesis Sample
- * @author  StudioPress
+ * @package PG Genesis Starter
+ * @author  Paul Garcia
  * @license GPL-2.0-or-later
- * @link    https://www.studiopress.com/
+ * @link    https://github.com/gp22/pg-genesis-starter/
  */
 
 return [
@@ -25,7 +25,7 @@ return [
 		'content_archive_limit'     => 0,
 		'content_archive_thumbnail' => 0,
 		'entry_meta_after_content'  => '[post_categories] [post_tags]',
-		'entry_meta_before_content' => '[post_date] ' . __( 'by', 'genesis-sample' ) . ' [post_author_posts_link] [post_comments] [post_edit]',
+		'entry_meta_before_content' => '[post_date] ' . __( 'by', 'pg-genesis-starter' ) . ' [post_author_posts_link] [post_comments] [post_edit]',
 		'image_size'                => 'genesis-singular-images',
 		'image_alignment'           => 'aligncenter',
 		'posts_nav'                 => 'numeric',
