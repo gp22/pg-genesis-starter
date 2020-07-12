@@ -1,170 +1,133 @@
-/* WPForms
+/* WP Forms
 --------------------------------------------- */
 
-div.wpforms-container {
+.entry-content {
+  @include clearfix;
 
-	.wpforms-title {
-	    @include font-sizes( 24px, 32px );
-		font-weight: 700;
-		line-height: 1.2;
-		margin: 0 0 16px;
-		padding: 0;
-	}
+  .wpforms-container {
+    margin-bottom: 40px;
+  }
 
-	.wpforms-description {
-		margin: 0 0 16px;
-		padding: 0;
-	}
+  .wpforms-form {
 
-	.wpforms-field {
-		padding: 0;
-		margin-bottom: 32px;
-	}
+    .wpforms-field {
+      clear: both;
+      margin: 20px 0;
+      overflow: hidden;
+    }
 
-	.wpforms-field-label {
-		font-size: 16px;
-	}
-
-	.wpforms-recaptcha-container {
-		padding: 0;
-
-		@include media(">=tablet") {
-			margin-bottom: -78px;
-		}
-	}
-
-	.wpforms-submit-container {
-		padding: 0;
-		margin-top: 32px;
-		text-align: right;
-	}
-
-	&.one-line {
-		@include clearfix;
-
-			@include media(">=tablet") {
-
-			.wpforms-field-container {
-				display: table;
-				width: calc(100% - 110px);
-				float: left;
-
-				.wpforms-field {
-					display: table-cell;
-					padding-right: 16px;
-					margin: 0;
-				}
-			}
-
-			.wpforms-submit-container {
-				float: right;
-				width: 110px;
-				clear: none;
-				margin: 0;
-			}
-		}
-	}
+    .wpforms-field-hp {
+      display: none !important;
+      left: -9000px !important;
+      position: absolute !important;
+    }
+  }
 }
 
-/* Shared Counts
+.site-container {
+  @include clearfix;
+
+  .wpforms-container {
+
+    .wpforms-form {
+
+      .wpforms-field {
+
+        input {
+          border-radius: 0;
+          height: auto;
+          padding: 15px;
+        }
+      }
+    }
+  }
+
+  .entry-content {
+
+    .wpforms-form {
+
+      .wpforms-field-label {
+        font-weight: 600;
+      }
+
+      .wpforms-field-sublabel {
+        font-size: 14px;
+        font-weight: 300;
+      }
+
+      textarea {
+        padding: 15px;
+
+        &.wpforms-field-small {
+          height: 120px;
+        }
+
+        &.wpforms-field-medium {
+          height: 200px;
+        }
+
+        &.wpforms-field-large {
+          height: 300px;
+        }
+      }
+    }
+  }
+}
+
+/* Genesis eNews Extended
 --------------------------------------------- */
 
-.shared-counts-wrap {
+.after-entry .enews {
+	text-align: center;
+	padding: 10px;
+}
 
-	&.style-icon {
+.sidebar .enews {
+	background-color: $gray-1;
+	padding: 30px;
+}
 
-		svg {
-			fill: $grey_5;
-			@include icon-position( 24px );
-		}
+.enews-widget input {
+	font-size: 16px;
+	margin-bottom: 10px;
+}
 
-		.shared-counts-button {
-			line-height: 0;
-			padding: 10px;
+.after-entry .enews-widget input {
+	text-align: center;
+}
 
-			&:hover svg {
-				fill: $highlight;
-			}
+.enews-widget input[type="submit"] {
+	margin: 0;
+	width: 100%;
+}
 
-			&:not(.included_total) {
-				.shared-counts-label,
-				.shared-counts-count {
-					display: none;
-				}
-			}
-		}
-	}
+.enews form + p {
+	margin-top: 20px;
+}
 
-	&.style-button {
+/* Genesis Simple FAQ
+--------------------------------------------- */
 
-		@supports( display: $grid ) {
-			display: grid;
-			grid-template-columns: repeat( 2, 1fr );
-			grid-column-gap: 16px;
+.gs-faq__question {
+	background: transparent;
+	border-bottom: 1px solid $border-color;
+	color: $base-color;
+	padding-left: 0;
+	padding-right: 0;
+}
 
-			@include media(">=tablet") {
-				grid-template-columns: repeat( 4, 1fr );
-			}
-		}
+.gs-faq__question:focus,
+.gs-faq__question:hover {
+	background: transparent;
+	color: #0073e5;
+}
 
-		h3 {
-			color: $grey_8;
-			text-transform: uppercase;
-			font-weight: 600;
-			text-align: center;
-			grid-column: 1 / -1;
-		}
+.gs-faq__question::after {
+	content: "\f132";
+	font-family: dashicons; /* stylelint-disable-line font-family-no-missing-generic-family-keyword */
+	float: right;
+}
 
-		.shared-counts-button {
-			background: $grey_6;
-			border-radius: 3px;
-			color: $white;
-			display: block;
-			font-size: 16px;
-			font-weight: 600;
-			padding: 18px;
-			text-align: center;
-			text-decoration: none;
-			margin-bottom: 15px;
-
-			&:hover {
-				background: $grey_8;
-			}
-
-			svg {
-				fill: $white;
-				@include icon-position( 24px );
-				vertical-align: middle;
-				margin-right: 10px;
-			}
-
-			&.facebook {
-				background: $facebook;
-
-				&:hover {
-					background: darken( $facebook, 10% );
-				}
-			}
-
-			&.pinterest {
-				background: $pinterest;
-
-				&:hover {
-					background: darken( $pinterest, 10% );
-				}
-			}
-
-			&.twitter {
-				background: $twitter;
-
-				&:hover {
-					background: darken( $twitter, 10% );
-				}
-			}
-		}
-
-		.shared-counts-count {
-			display: none;
-		}		
-	}
+.gs-faq__question.gs-faq--expanded::after {
+	content: "\f460";
 }

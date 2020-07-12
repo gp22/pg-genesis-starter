@@ -1,7 +1,10 @@
 @import "node_modules/normalize.css/normalize";
+@import "partials/typography";
 @import "partials/base";
+@import "partials/common";
 @import "partials/layout";
 @import "partials/form";
+@import "partials/gallery";
 @import "partials/blocks-base";
 @import "partials/blocks-core";
 @import "partials/blocks-plugin";
@@ -12,3 +15,4 @@
 @import "partials/archive";
 @import "partials/singular";
 @import "partials/site-footer";
+@import "partials/table";

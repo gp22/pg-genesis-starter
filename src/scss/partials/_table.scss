@@ -1,0 +1,39 @@
+/* Tables
+--------------------------------------------- */
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	margin-bottom: 40px;
+	width: 100%;
+  word-break: break-all;
+
+	@include media(">=small") {
+		table-layout: auto;
+		word-break: normal;
+  }
+}
+
+tbody {
+	border-bottom: 1px solid $gray-2;
+}
+
+td,
+th {
+	line-height: 2;
+	text-align: left;
+	vertical-align: top;
+}
+
+td {
+	padding: 0.5em;
+}
+
+tr {
+	border-top: 1px solid $gray-2;
+}
+
+th {
+	font-weight: 600;
+	padding: 0.5em;
+}

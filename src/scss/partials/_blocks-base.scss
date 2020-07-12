@@ -1,26 +1,43 @@
 /* Typographical Elements
 --------------------------------------------- */
 
+html {
+	@include font-sizes( $font-base );
+
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+}
+
 body {
-	@include base-style();
+	@include base-style;
+}
+
+button,
+input:focus,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+textarea:focus,
+.button,
+.gallery img {
+	transition: all 0.2s ease-in-out;
 }
 
 a {
-	color: $highlight;
+	color: #0073e5;
 	text-decoration: underline;
-	@extend %transition;
-
-	&:hover {
-		text-decoration: none;
-	}
-
-	svg {
-		@extend %transition;
-	}
+	transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
 
-strong {
-	font-weight: 700;
+a:focus,
+a:hover {
+	color: $base-color;
+	text-decoration: none;
+}
+
+p {
+	margin: 0 0 30px;
+	padding: 0;
 }
 
 ol,
@@ -29,65 +46,59 @@ ul {
 	padding: 0;
 }
 
-code,
-pre {
-	font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
-	font-size: 12px;
+li {
+	list-style-type: none;
 }
 
-code {
-	padding: 2px 4px;
-	white-space: nowrap;
-}
-
-pre {
-	display: block;
-	padding: 9.5px;
-	margin: 0 0 10px;
-	line-height: 18px;
-	word-break: break-all;
-	word-wrap: break-word;
-	white-space: pre;
-	white-space: pre-wrap;
-}
-
-pre code {
-	padding: 0;
-	color: inherit;
-	white-space: pre;
-	white-space: pre-wrap;
-	background-color: transparent;
+hr {
 	border: 0;
+	border-collapse: collapse;
+	border-bottom: 1px solid currentColor;
+	clear: both;
+	color: $gray-2;
+	margin: 1.65em auto;
 }
 
-cite {
-	font-style: normal;
+b,
+strong {
+	font-weight: 700;
 }
 
-.clearfix {
-	@include clearfix;
+blockquote,
+cite,
+em,
+i {
+	font-style: italic;
 }
 
-/* Paragraph
+mark {
+	background: #ddd;
+	color: $base-color;
+}
+
+blockquote {
+	margin: 30px;
+}
+
+/* Objects
 --------------------------------------------- */
 
-p {
-	margin: 0 0 $base-margin;
-	padding: 0;
+embed,
+iframe,
+img,
+object,
+video,
+.wp-caption {
+	max-width: 100%;
+}
 
-	&.large,
-	&.has-large-font-size {
-    	@include font-sizes( 21px, 24px );
-	}
+img {
+	height: auto;
+	vertical-align: top;
+}
 
-	&.has-normal-font-size {
-		@include font-sizes( 18px, 20px );
-	}
-
-	&.small,
-	&.has-small-font-size {
-	    font-size: 14px;
-	}
+figure {
+	margin: 0;
 }
 
 /* Headings
@@ -99,38 +110,38 @@ h3,
 h4,
 h5,
 h6 {
-	color: $grey_10;
-	font-family: $serif;
-	font-weight: 400;
-	line-height: 1.2;
-	margin: 0 0 16px;
-
-	a {
-		color: $grey_10;
-
-		&:hover {
-			color: $highlight;
-			text-decoration: none;
-		}
-	}
-
-	&:focus {
-		outline: none;
-	}
+  @include heading;
 }
 
 h1 {
-    @include font-sizes( 34px, 42px, 46px );
+	@include h1;
 }
 
 h2 {
-    @include font-sizes( 26px, 32px, 36px );
+  @include h2;
 }
 
 h3 {
-    @include font-sizes( 22px, 26px, 28px );
+	@include h3;
 }
 
-h4, h5, h6 {
-    @include font-sizes( 18px, 22px );
+h4 {
+  @include h4;
+}
+
+.entry-content h3,
+.entry-content h4 {
+	font-weight: 600;
+}
+
+.entry-content h4 {
+	margin-top: 40px;
+}
+
+h5 {
+  @include h5;
+}
+
+h6 {
+	@include h6;
 }

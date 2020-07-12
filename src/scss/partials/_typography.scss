@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@500&family=Open+Sans:ital,wght@0,400;0,700;1,300;1,400&display=swap');
+
+// Fonts
+$font-sans:    "Open Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+$font-serif:   Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+$font-display: "Hind", $font-sans;
+$font-mono:    Monaco, Menlo, Consolas, "Courier New", monospace;
+
+// Type Scale
+$font-base:    16px;
+$text-tiny: 0.555rem;
+$text-xs: 	0.702rem;
+$text-sm: 	0.889rem;
+$text-base: 1rem;
+$text-lg: 	1.125rem;
+$text-xl: 	1.266rem;
+$text-2xl: 	1.424rem;
+$text-3xl: 	1.602rem;
+$text-4xl: 	1.802rem;
+$text-5xl: 	2.027rem;
+$text-6xl: 	2.281rem;
+
+// Line Height
+$line-height-body: 1.688;
+$line-height-h6: 1.45;
+$line-height-h5: 1.4;
+$line-height-h4: 1.35;
+$line-height-h3: 1.3;
+$line-height-h2: 1.25;
+$line-height-h1: 1.2;
+
+// Tracking
+$tracking-tighter: -0.05em;
+$tracking-wider: 0.05em;

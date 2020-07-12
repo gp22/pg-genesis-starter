@@ -1,106 +1,36 @@
-.archive {
-
-	.site-main {
-
-		.block-area,
-		.no-results {
-			grid-column: 1 / -1;
-			margin-bottom: 48px;
-		}
-
-		@include media(">small", "<medium") {
-			@include columns(2);
-		}
-
-		@include media(">=medium") {
-			@include columns(4);
-		}
-	}
-}
-
-/* Archive Header
---------------------------------------------- */
-
-.archive-description {
-	text-align: center;
-	width: 100%;
-	max-width: $content-width;
-	margin: 0 auto $grid-gap;
-
-	& > *:last-child {
-		margin-bottom: 0;
-	}
-
-	.search-form {
-		margin: 0 auto;
-	}
-
-}
-
-.author-archive-description {
-
-	.avatar {
-		border-radius: 50%;
-		display: block;
-		margin: 0 auto 16px;
-	}
-
-	h3:last-child {
-		@include media(">=tablet") {
-			margin-top: 48px;
-		}
-	}
-}
-
-.author-title {
-	color: $grey_8;
-	@include font-sizes( 18px, 20px );
-	font-weight: 700;
-	text-transform: uppercase;
-}
-
-/* Entry Navigation
+/* Pagination
 --------------------------------------------- */
 
 .pagination {
-	border-top: 1px solid $border-color;
+	@include clearfix;
+
+	clear: both;
+	margin: 60px 0;
+}
+
+.adjacent-entry-pagination {
+	margin-bottom: 0;
+}
+
+.archive-pagination li {
+	display: inline;
+}
+
+.archive-pagination li a {
+	background-color: $gray-1;
+	color: $base-color;
+	cursor: pointer;
+	display: inline-block;
 	font-size: 16px;
-	text-align: center;
-	padding-top: 22px;
+	font-weight: 600;
+	margin-bottom: 4px;
+	padding: 8px 12px;
+	text-decoration: none;
+}
 
-	ul {
-		margin: 0;
-
-		li {
-			list-style-type: none;
-			display: inline-block;
-
-			a {
-				color: $base-color;
-				border-radius: 50%;
-				display: block;
-				font-weight: 400;
-				text-decoration: none;
-				width: 29px;
-				height: 29px;
-				line-height: 29px;
-				text-align: center;
-			}
-
-			&.pagination-next a,
-			&.pagination-previous a {
-				width: auto;
-			}
-
-			&:hover > a {
-				color: $highlight;
-			}
-
-			&.active > a {
-				background: $highlight;
-				color: $white;
-				font-weight: 700;
-			}
-		}
-	}
+.archive-pagination li a:focus,
+.archive-pagination li a:hover,
+.archive-pagination li.active a {
+	background-color: $base-color;
+	color: $white;
 }

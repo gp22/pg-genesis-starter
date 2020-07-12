@@ -5,11 +5,19 @@
 @mixin button-reset() {
 	background: transparent;
 	border: none;
-	border-radius: 0;
 	box-shadow: none;
-	padding: 0;
-	outline: none;
 	cursor: pointer;
+	outline: none;
+}
+
+@mixin button-primary() {
+	background-color: brand-color( 'light-blue' );
+	border-radius: $rounded-sm;
+	color: $white;
+	font-weight: 700;
+	letter-spacing: $tracking-wider;
+	padding: $size-3 $size-6;
+	text-transform: uppercase;
 }
 
 /**
@@ -85,13 +93,19 @@
  */
 @mixin placeholder-color( $color ) {
 
+	::placeholder {
+		color: $color;
+		opacity: 1;
+	}
+
   ::-moz-placeholder {
   	color: $color;
   	opacity: 1;
   }
 
   ::-ms-input-placeholder {
-  	color: $color;
+		color: $color;
+		opacity: 1;
   }
 
   ::-webkit-input-placeholder {
@@ -118,6 +132,11 @@
 		content: "";
 		display: table;
 		clear: both;
+	}
+
+	&:before {
+		content: " ";
+		display: table;
 	}
 }
 

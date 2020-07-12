@@ -1,144 +1,55 @@
 /* Footer Widgets
----------------------------------------------------------------------------------------------------- */
+---------------------------------------------------------------------------- */
 
 .footer-widgets {
-	background: brand-color( 'blue' );
-	padding: 40px 0 10px;
-	position: relative;
+  @include clearfix;
 
-	ul {
-		margin-bottom: 30px;
-	}
+	border-top: 1px solid $border-color;
+	background-color: $white;
+	clear: both;
+  padding: 60px 0;
 
-	li {
-		list-style-type: none;
-		margin-bottom: 12px;
-	}
+  .wrap {
+    margin-left: auto;
+    margin-right: auto;
 
-	.widget-title {
-		color: $white;
-		font-size: 16px;
-		font-weight: 700;
-		text-transform: uppercase;
-	}
+    @include media(">=desktop") {
+      max-width: 1140px;
+    }
+  }
+}
 
-	a {
-		color: $white;
-		text-decoration: none;
+.footer-widget-area {
+	margin-bottom: 40px;
+	padding-left: 30px;
+  padding-right: 30px;
 
-		&:hover {
-			text-decoration: underline;
-		}
+  @include media(">=desktop") {
+    float: left;
+		margin-bottom: 0;
+		width: calc(100% / 3);
+  }
+}
 
-		svg {
-			fill: $white;
-			@include icon-position( 20px );
-			margin-right: 12px;
-		}
-	}
-
-	@include media("<tablet") {
-		.social-links li {
-				display: inline-block;
-				margin: 0;
-		}
-
-		.social-links .label {
-			display: none;
-		}
-
-		.footer-widgets-1 {
-			float: left;
-			width: calc( 50% - 8px );
-		}
-
-		.footer-widgets-2 {
-			float: right;
-			width: calc( 50% - 8px );
-		}
-
-		.footer-widgets-3 {
-			overflow: hidden;
-			width: 100%;
-		}
-	}
-
-	@include media(">=tablet") {
-		.wrap {
-			@include columns( 3, 'div' );
-		}
-	}
+.footer-widget-area:last-child,
+.footer-widgets .widget:last-child {
+	margin-bottom: 0;
 }
 
 /* Site Footer
----------------------------------------------------------------------------------------------------- */
+---------------------------------------------------------------------------- */
 
 .site-footer {
-	background: brand-color( 'blue', 'darken' );
-	color: rgba( $white, .75 );
-	font-size: 14px;
-	padding: 32px 0;
-	text-align: center;
+  @include clearfix;
 
-	.wrap > *:last-child {
-		margin-bottom: 0;
-	}
+	background-color: $white;
+	border-top: 1px solid $border-color;
+	font-size: 15px;
+	line-height: 1.5;
+	padding: 30px;
+  text-align: center;
 
-	a {
-		color: rgba( $white, .75 );
-
-		&:hover {
-			color: rgba( $white, 1 );
-		}
-	}
-
-	.footer-links a + a {
-		margin-left: 12px;
-	}
-
-	.cafemedia {
-		text-transform: uppercase;
-	}
-
-	.backtotop {
-		background: rgba( $black, .75 );
-		border-radius: 3px;
-		display: inline-block;
-		line-height: 20px;
-		padding: 10px;
-		text-decoration: none;
-
-		svg {
-			fill: $white;
-			margin-left: 4px;
-			vertical-align: middle;
-		}
-
-		&:hover {
-			background: rgba( $black, 1 );
-		}
-	}
-
-	@include media(">=tablet") {
-		text-align: left;
-
-		.footer-left {
-			float: left;
-
-			& > *:last-child {
-				margin-bottom: 0;
-			}
-		}
-
-		.copyright,
-		.footer-links {
-			display: inline-block;
-			margin-right: 20px;
-		}
-
-		.backtotop {
-			float: right;
-		}
-	}
-
+  p {
+    margin-bottom: 0;
+  }
 }
